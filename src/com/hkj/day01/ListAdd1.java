@@ -176,10 +176,44 @@ public class ListAdd1 {
         }
     }
 
+    /**
+     * DelayQueue的使用
+     */
     @Test
-    public void testDelayQueue() {
-        System.out.println("DelayQueue");
-        System.out.println("-----------------------");
+    public void testDelayQueue() throws InterruptedException {
+        // 放入DelayQueue的元素需要实现Delayed接口并重写getDelay，compareTo方法
+        DelayQueue<People> delayQueue = new DelayQueue<>();
+        People lisi = new People(10000, "lisi");
+        delayQueue.offer(lisi);
+
+        People xiaohong = new People(5000, "xiaohong");
+        delayQueue.offer(xiaohong);
+        System.out.println(delayQueue.take());
+        System.out.println(delayQueue.take());
+
+    }
+
+    class People implements Delayed {
+        private TimeUnit timeUnit = TimeUnit.SECONDS;  // 定义时间的工具类
+        private long age;  // 截止时间
+        private String name;
+        public People(long age, String name) {
+            this.age = age;
+            this.name = name;
+        }
+        @Override
+        public long getDelay(TimeUnit unit) {
+            return age - System.currentTimeMillis();
+        }
+        @Override
+        public int compareTo(Delayed delayed) {
+            return (this.getDelay(this.timeUnit) - delayed.getDelay(this.timeUnit))
+                    > 0 ? 1 : 0;
+        }
+        @Override
+        public String toString() {
+            return "[ " + name + ", " + age + " ]";
+        }
     }
 
 }
