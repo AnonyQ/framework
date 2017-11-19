@@ -95,12 +95,17 @@ public class ListAdd1 {
         System.out.println(blockingQueue.toString());
     }
 
+    /**
+     * 指定LinkedBlockedDeque的容量，如果使用add添加的元素数量超出容量，则会抛出异常，
+     * 使用offer则会添加失败，但不会抛出异常
+     */
     @Test
     public void testLinkedBlockedDeque() {
         LinkedBlockingDeque<Integer> blockingDeque = new LinkedBlockingDeque<>(5);
         for (int i = 0;i < 10;i ++) {
             blockingDeque.add(i);
         }
+        blockingDeque.offer(6);
     }
 
     /**
