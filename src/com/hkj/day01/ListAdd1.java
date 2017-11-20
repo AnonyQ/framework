@@ -216,4 +216,17 @@ public class ListAdd1 {
         }
     }
 
+    class Parent {   }
+    class Child extends Parent {  }
+
+    @Test
+    public void testInstanceOf() {
+        Child child = new Child();
+        Parent parent = new Parent();
+        System.out.println(child instanceof Parent);
+        System.out.println(child instanceof Object);
+        System.out.println(parent instanceof Child);
+        System.out.println(parent instanceof Object);
+    }
+
 }
