@@ -754,7 +754,7 @@
       <workItem from="1511145238360" duration="4021000" />
       <workItem from="1511228093753" duration="4916000" />
       <workItem from="1511313372331" duration="598000" />
-      <workItem from="1511355295339" duration="4978000" />
+      <workItem from="1511355295339" duration="5129000" />
     </task>
     <task id="LOCAL-00001" summary="LinkedBlockedDeque之添加元素方式add和offer区别及注意事项">
       <created>1511056325762</created>
@@ -799,7 +799,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45651000" />
+    <option name="totallyTimeSpent" value="45802000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
