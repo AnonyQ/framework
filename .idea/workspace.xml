@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b44cb5d4-5df5-4779-94f8-e961c9ef4007" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hkj/day01/DelayQueueTest.java" afterPath="$PROJECT_DIR$/src/com/hkj/day01/DelayQueueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/hkj/day01/ListAdd1.java" afterPath="$PROJECT_DIR$/src/com/hkj/day01/ListAdd1.java" />
-    </list>
+    <list default="true" id="b44cb5d4-5df5-4779-94f8-e961c9ef4007" name="Default" comment="" />
     <ignored path="framemork.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -758,7 +754,7 @@
       <workItem from="1511145238360" duration="4021000" />
       <workItem from="1511228093753" duration="4916000" />
       <workItem from="1511313372331" duration="598000" />
-      <workItem from="1511355295339" duration="4879000" />
+      <workItem from="1511355295339" duration="4978000" />
     </task>
     <task id="LOCAL-00001" summary="LinkedBlockedDeque之添加元素方式add和offer区别及注意事项">
       <created>1511056325762</created>
@@ -803,7 +799,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45552000" />
+    <option name="totallyTimeSpent" value="45651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
