@@ -1,5 +1,7 @@
 package com.hkj.day01;
 
+import org.junit.Test;
+
 import java.util.concurrent.DelayQueue;
 import java.util.concurrent.Delayed;
 import java.util.concurrent.TimeUnit;
@@ -122,5 +124,39 @@ public class DelayQueueTest {
 //        if ( queue.contains( g ) ) {
 //            queue.remove( g );
 //        }
+    }
+
+    /**
+     * 当没有额外的线程时，从DelayQueue中取元素，还会不会有延迟效果？
+     * 完美正常！！
+     */
+    @Test
+    public void testNoThread() {
+        long daltime = System.currentTimeMillis() / 1000;
+        DelayAlarm a = new DelayAlarm( "001", daltime, 1L );
+        DelayAlarm b = new DelayAlarm( "002", daltime, 3L );
+        DelayAlarm c = new DelayAlarm( "003", daltime, 5L );
+        DelayAlarm d = new DelayAlarm( "004", daltime, 2L );
+        DelayAlarm f = new DelayAlarm( "005", daltime, 10L );
+        push( a );
+        push( b );
+        push( c );
+        push( d );
+        push( f );
+
+        try {
+            DelayAlarm delayAlarm1 = queue.take();
+            System.out.println(delayAlarm1);
+            DelayAlarm delayAlarm2 = queue.take();
+            System.out.println(delayAlarm2);
+            DelayAlarm delayAlarm3 = queue.take();
+            System.out.println(delayAlarm3);
+            DelayAlarm delayAlarm4 = queue.take();
+            System.out.println(delayAlarm4);
+            DelayAlarm delayAlarm5 = queue.take();
+            System.out.println(delayAlarm5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

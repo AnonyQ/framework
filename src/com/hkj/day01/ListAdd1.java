@@ -185,10 +185,10 @@ public class ListAdd1 {
         DelayQueue<People> delayQueue = new DelayQueue<>();
         People lisi = new People(10000, "lisi");
         delayQueue.offer(lisi);
+        System.out.println(delayQueue.take());
 
         People xiaohong = new People(5000, "xiaohong");
         delayQueue.offer(xiaohong);
-        System.out.println(delayQueue.take());
         System.out.println(delayQueue.take());
 
     }
@@ -198,7 +198,7 @@ public class ListAdd1 {
         private long age;  // 截止时间
         private String name;
         public People(long age, String name) {
-            this.age = age;
+            this.age = age + System.currentTimeMillis();
             this.name = name;
         }
         @Override
