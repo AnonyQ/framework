@@ -23,30 +23,36 @@ public class SynchronousQueueTest {
             @Override
             public void run() {
                 try {
+                    Thread.sleep(300);
+                    System.out.println(Thread.currentThread().getName() + " get item");
                     System.out.println(synchronousQueue.take());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-        }).start();
+        }, "thread1").start();
         new Thread(new Runnable(){
             @Override
             public void run() {
                 try {
+                    Thread.sleep(300);
+                    System.out.println(Thread.currentThread().getName() + " get item");
                     System.out.println(synchronousQueue.take());
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
             }
-        }).start();
+        }, "thread2").start();
 
         new Thread(new Runnable(){
             @Override
             public void run() {
                 try {
-                    Thread.sleep(100);
+                    System.out.println("add --> test1");
                     synchronousQueue.add("test1");
+                    System.out.println("add --> test2");
                     synchronousQueue.add("test2");
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
